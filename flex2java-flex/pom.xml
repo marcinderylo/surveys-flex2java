@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.adaptiveplatform.flex2java</groupId>
+		<artifactId>flex2java</artifactId>
+		<version>0.9</version>
+	</parent>
+
+	<groupId>org.adaptiveplatform.flex2java</groupId>
+	<artifactId>flex2java-flex</artifactId>
+	<version>0.9</version>
+	<packaging>swc</packaging>
+
+	<name>flex2java-remoting Flex</name>
+
+	<build>
+		<sourceDirectory>src/main/flex</sourceDirectory>
+		<testSourceDirectory>src/test/flex</testSourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.sonatype.flexmojos</groupId>
+				<artifactId>flexmojos-maven-plugin</artifactId>
+				<extensions>true</extensions>
+				<dependencies>
+					<dependency>
+						<groupId>com.adobe.flex</groupId>
+						<artifactId>compiler</artifactId>
+						<version>${flexsdk.version}</version>
+						<type>pom</type>						
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.adobe.flex.framework</groupId>
+			<artifactId>flex-framework</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.adobe.flexunit</groupId> 
+			<artifactId>flexunit</artifactId> 
+  			<type>swc</type> 
+			<version>0.90</version> 
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

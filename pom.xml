@@ -1,0 +1,130 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.adaptiveplatform.flex2java</groupId>
+	<artifactId>flex2java</artifactId>
+	<version>0.9</version>
+	<packaging>pom</packaging>
+	<name>Flex-Java communication library ROOT</name>
+
+	<modules>
+		<module>codegenerator-api</module>
+		<module>as3-codegenerator</module>
+		<module>flex2java-flex</module>
+	</modules>
+
+	<properties>
+		<flexsdk.version>3.5.0.12683</flexsdk.version>
+		<flexmojos.version>3.4.2</flexmojos.version>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.sonatype.flexmojos</groupId>
+					<artifactId>flexmojos-maven-plugin</artifactId>
+					<version>${flexmojos.version}</version>
+					<extensions>true</extensions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.adaptiveplatform.flex2java</groupId>
+				<artifactId>codegenerator-api</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.adobe.flex.framework</groupId>
+				<artifactId>flex-framework</artifactId>
+				<version>${flexsdk.version}</version>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>org.sonatype.flexmojos</groupId>
+				<artifactId>flexmojos-generator-api</artifactId>
+				<version>${flexmojos.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.freemarker</groupId>
+				<artifactId>freemarker</artifactId>
+				<version>2.3.16</version>
+			</dependency>
+
+			<!-- logging -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.5.6</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.5.6</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.14</version>
+				<scope>runtime</scope>
+			</dependency>
+
+			<!-- test -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<scope>test</scope>
+				<version>4.8.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-core</artifactId>
+				<version>1.8.5</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.easytesting</groupId>
+				<artifactId>fest-assert</artifactId>
+				<version>1.3</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>http://repo2.maven.org/maven2</url>
+		</repository>
+		<repository>
+			<id>org.springframework.maven.milestone</id>
+			<url>http://maven.springframework.org/milestone </url>
+		</repository>
+		<repository>
+			<id>sonatype-flexmojos</id>
+			<url>http://repository.sonatype.org/content/groups/flexgroup/</url>
+		</repository>
+		<repository>
+			<id>JBoss</id>
+			<url>http://repository.jboss.com/maven2</url>
+		</repository>
+		<repository>
+			<id>adapt</id>
+			<url>http://svn2.xp-dev.com/svn/adapt-m2repo</url>
+		</repository>
+	</repositories>
+</project>
