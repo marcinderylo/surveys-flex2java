@@ -22,7 +22,7 @@ package ${package} {
 		
 		<#list methods as method>
 		public function ${method.name}(<#list method.parameters as parameter>${parameter.name}:${parameter.type.name}<#if parameter_has_next>, </#if></#list>):ResultHandler{
-			return remoteService.call("${beanName}", "${method.name}", <#list method.parameters as parameter>${parameter.name}<#if parameter_has_next>, </#if></#list>);
+			return remoteService.call("${beanName}", "${method.name}"<#if (method.parameters?size > 0)>, <#list method.parameters as parameter>${parameter.name}<#if parameter_has_next>, </#if></#list></#if>);
 		}
 		
 		</#list>
