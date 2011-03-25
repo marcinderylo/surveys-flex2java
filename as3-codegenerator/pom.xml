@@ -3,12 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.adaptiveplatform.flex2java</groupId>
 	<artifactId>as3-codegenerator</artifactId>
-	<version>0.9</version>
 	<name>Adaptive Platform - Code Generator</name>
 	<parent>
 		<groupId>org.adaptiveplatform.flex2java</groupId>
 		<artifactId>flex2java</artifactId>
-		<version>0.9</version>
+		<version>0.9.1</version>
 	</parent>
 	<build>
 		<plugins>
