@@ -14,12 +14,12 @@ package org.adaptiveplatform.communication {
 		}
 
 		public function onSuccess(success:Function):ResultHandler {
-			try {
-				if (result != null) {
-					success(result);
-				} else {
-					success();
-				}
+            try {
+                if (success.length == 0) {
+                    success();
+                } else {
+                    success(result);
+                }
 			} catch (error:Error) {
 				faultHappened=true;
 				fault=new Fault("" + error.errorID, "" + error.name, "" + error.message);

@@ -7,10 +7,8 @@ import java.util.Set;
 
 import org.adaptiveplatform.codegenerator.utils.StringUtils;
 
-
 /**
- * Model representing a java remote interface class wich is going to be exported
- * to AS3.
+ * Model representing AS3 remote interface class.
  * 
  * @author Rafal Jamroz
  */

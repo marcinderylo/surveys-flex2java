@@ -16,6 +16,9 @@ package ${package} {
 		 * ${property.type.name} of <#list property.type.actualGenericArguments as generic>${generic.name}<#if generic_has_next>, </#if></#list>
 		 */
 		</#if>
+		<#list property.annotations as annotation>
+		[${annotation.name}<#if annotation.hasParameters()>(<#list annotation.parameters as param>${param.name}=${param.valueAsString}<#if param_has_next>, </#if></#list>)</#if>]
+		</#list>
   		public var ${property.name}:${property.type.name};
   		
 		</#list>

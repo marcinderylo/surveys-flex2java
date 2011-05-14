@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.adaptiveplatform.flex2java</groupId>
 	<artifactId>flex2java</artifactId>
-	<version>0.9.1</version>
+	<version>1.0.RC1</version>
 	<packaging>pom</packaging>
 	<name>Flex-Java communication library ROOT</name>
 
@@ -15,7 +15,7 @@
 
 	<properties>
 		<flexsdk.version>3.5.0.12683</flexsdk.version>
-		<flexmojos.version>3.4.2</flexmojos.version>
+		<flexmojos.version>3.9</flexmojos.version>
 	</properties>
 
 	<build>

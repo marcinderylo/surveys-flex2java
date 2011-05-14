@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Model representing java method.
+ * Model representing AS3 method.
  * 
  * @author Rafal Jamroz
  */
@@ -14,8 +14,7 @@ public class MethodModel {
 	private List<ParameterModel> parameters;
 	private boolean hasGenericParameter;
 
-	public MethodModel(String name, TypeModel returnType,
-			List<ParameterModel> paramters) {
+	public MethodModel(String name, TypeModel returnType, List<ParameterModel> paramters) {
 		this.name = name;
 		this.returnType = returnType;
 		this.parameters = Collections.unmodifiableList(paramters);
@@ -34,7 +33,7 @@ public class MethodModel {
 	public TypeModel getReturnType() {
 		return returnType;
 	}
-	
+
 	public boolean isHasGenericParameter() {
 		return hasGenericParameter;
 	}

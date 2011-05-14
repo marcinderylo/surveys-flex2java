@@ -2,9 +2,9 @@ package org.adaptiveplatform.codegenerator.utils;
 
 public final class ArrayUtils {
 
-    private ArrayUtils() {
-    }
-    
+	private ArrayUtils() {
+	}
+
 	public static String join(String[] elements, String glue) {
 		StringBuilder string = new StringBuilder();
 		boolean first = true;

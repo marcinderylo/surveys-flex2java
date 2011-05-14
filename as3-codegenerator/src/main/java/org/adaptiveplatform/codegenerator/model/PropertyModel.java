@@ -1,7 +1,10 @@
 package org.adaptiveplatform.codegenerator.model;
 
+import java.util.Collections;
+import java.util.List;
+
 /**
- * Model representing java property.
+ * Model representing AS3 property.
  * 
  * @author Rafal Jamroz
  */
@@ -10,12 +13,18 @@ public class PropertyModel {
 	private TypeModel type;
 	private boolean readable;
 	private boolean writable;
+	private List<AnnotationModel> annotations;
 
-	public PropertyModel(TypeModel type, String name, boolean readable, boolean writable) {
+	public PropertyModel(TypeModel type, String name, boolean readable, boolean writable,
+			List<AnnotationModel> annotations) {
 		this.name = name;
 		this.type = type;
 		this.readable = readable;
 		this.writable = writable;
+		this.annotations = annotations;
+		if (this.annotations == null) {
+			this.annotations = Collections.emptyList();
+		}
 	}
 
 	public String getName() {
@@ -32,6 +41,10 @@ public class PropertyModel {
 
 	public boolean isWritable() {
 		return writable;
+	}
+
+	public List<AnnotationModel> getAnnotations() {
+		return annotations;
 	}
 
 	@Override

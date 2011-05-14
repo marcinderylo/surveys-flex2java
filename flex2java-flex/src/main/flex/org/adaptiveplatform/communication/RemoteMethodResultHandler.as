@@ -14,8 +14,12 @@ package org.adaptiveplatform.communication {
 		}
 
 		public function onSuccess(success:Function):ResultHandler {
-			remoteMethod.addEventListener(ResultEvent.RESULT, function(event:ResultEvent):void {
-					success(event.result);
+                remoteMethod.addEventListener(ResultEvent.RESULT, function(event:ResultEvent):void {
+                    if (success.length == 0) {
+                        success();
+                    } else {
+                        success(event.result);
+                    }
 				});
 			return this;
 		}

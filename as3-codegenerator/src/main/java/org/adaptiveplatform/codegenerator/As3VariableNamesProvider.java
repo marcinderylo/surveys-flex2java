@@ -1,9 +1,12 @@
-package org.adaptiveplatform.codegenerator.utils;
+package org.adaptiveplatform.codegenerator;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-public class As3VariableNamesGenerator {
+import org.adaptiveplatform.codegenerator.utils.StringUtils;
+
+public class As3VariableNamesProvider {
 
 	private Set<String> restricted = new HashSet<String>();
 	private Set<String> usedNames = new HashSet<String>();
@@ -38,6 +41,10 @@ public class As3VariableNamesGenerator {
 
 	public void reset() {
 		usedNames.clear();
+	}
+
+	public void addRestrictedNames(Collection<String> names) {
+		restricted.addAll(names);
 	}
 
 	public void addRestrictedName(String string) {

@@ -1,7 +1,7 @@
 package org.adaptiveplatform.codegenerator.model;
 
 /**
- * Model representing a java method parameter.
+ * Model representing AS3 method parameter.
  * 
  * @author Rafal Jamroz
  */

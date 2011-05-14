@@ -3,8 +3,7 @@ package org.adaptiveplatform.codegenerator.model;
 import java.util.List;
 
 /**
- * Model representing java type (class, primitive, array, interface,
- * annotation).
+ * Model representing AS3 type (class, primitive, array, interface).
  * 
  * @author Rafal Jamroz
  */
@@ -18,9 +17,8 @@ public class TypeModel {
 	private final TypeModel superType;
 	private final List<TypeModel> actualGenericArguments;
 
-	public TypeModel(String originalPackage, String originalName, String pkg,
-			String name, Boolean isPrimitive, TypeModel superType,
-			List<TypeModel> genericParameters) {
+	public TypeModel(String originalPackage, String originalName, String pkg, String name, Boolean isPrimitive,
+			TypeModel superType, List<TypeModel> genericParameters) {
 		this.originalPackage = originalPackage;
 		this.originalName = originalName;
 		this.pkg = pkg;
@@ -31,20 +29,11 @@ public class TypeModel {
 	}
 
 	public boolean isGeneric() {
-		return actualGenericArguments != null
-				&& !actualGenericArguments.isEmpty();
+		return actualGenericArguments != null && !actualGenericArguments.isEmpty();
 	}
 
 	public boolean isSubclass() {
 		return superType != null;
-	}
-
-	public String getOriginalPackage() {
-		return originalPackage;
-	}
-
-	public String getOriginalName() {
-		return originalName;
 	}
 
 	public String getPackage() {
@@ -68,17 +57,29 @@ public class TypeModel {
 	}
 
 	@Override
+	public String toString() {
+		return "TypeModel [pkg=" + pkg + ", name=" + name + "]";
+	}
+
+	public String getOriginalPackage() {
+		return originalPackage;
+	}
+
+	public String getOriginalName() {
+		return originalName;
+	}
+
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime
-				* result
-				+ ((actualGenericArguments == null) ? 0
-						: actualGenericArguments.hashCode());
-		result = prime * result
-				+ ((originalName == null) ? 0 : originalName.hashCode());
-		result = prime * result
-				+ ((originalPackage == null) ? 0 : originalPackage.hashCode());
+		result = prime * result + ((actualGenericArguments == null) ? 0 : actualGenericArguments.hashCode());
+		result = prime * result + ((isPrimitive == null) ? 0 : isPrimitive.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((originalName == null) ? 0 : originalName.hashCode());
+		result = prime * result + ((originalPackage == null) ? 0 : originalPackage.hashCode());
+		result = prime * result + ((pkg == null) ? 0 : pkg.hashCode());
+		result = prime * result + ((superType == null) ? 0 : superType.hashCode());
 		return result;
 	}
 
@@ -96,6 +97,16 @@ public class TypeModel {
 				return false;
 		} else if (!actualGenericArguments.equals(other.actualGenericArguments))
 			return false;
+		if (isPrimitive == null) {
+			if (other.isPrimitive != null)
+				return false;
+		} else if (!isPrimitive.equals(other.isPrimitive))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
 		if (originalName == null) {
 			if (other.originalName != null)
 				return false;
@@ -106,13 +117,16 @@ public class TypeModel {
 				return false;
 		} else if (!originalPackage.equals(other.originalPackage))
 			return false;
+		if (pkg == null) {
+			if (other.pkg != null)
+				return false;
+		} else if (!pkg.equals(other.pkg))
+			return false;
+		if (superType == null) {
+			if (other.superType != null)
+				return false;
+		} else if (!superType.equals(other.superType))
+			return false;
 		return true;
-	}
-
-	@Override
-	public String toString() {
-		return "TypeModel [pkg=" + pkg + ", name=" + name
-				+ ", originalPackage=" + originalPackage + ", originalName="
-				+ originalName + ", isPrimitive=" + isPrimitive + "]";
 	}
 }

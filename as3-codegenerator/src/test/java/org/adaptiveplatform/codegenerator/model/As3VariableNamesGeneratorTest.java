@@ -6,16 +6,16 @@ import static junit.framework.Assert.assertFalse;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.adaptiveplatform.codegenerator.utils.As3VariableNamesGenerator;
+import org.adaptiveplatform.codegenerator.As3VariableNamesProvider;
 import org.junit.Before;
 import org.junit.Test;
 
 public class As3VariableNamesGeneratorTest {
-	private As3VariableNamesGenerator generator;
+	private As3VariableNamesProvider generator;
 
 	@Before
 	public void beforeMethod() throws Exception {
-		generator = new As3VariableNamesGenerator();
+		generator = new As3VariableNamesProvider();
 	}
 
 	@Test

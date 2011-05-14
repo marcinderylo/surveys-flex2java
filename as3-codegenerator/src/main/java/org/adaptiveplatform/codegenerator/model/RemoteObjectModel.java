@@ -6,17 +6,16 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Model representing java DTO kind of class wich is going to be exported to
- * AS3.
+ * Model representing AS3 DTO class.
  * 
  * @author Rafal Jamroz
  */
 public class RemoteObjectModel {
+
 	private TypeModel type;
 	private List<PropertyModel> properties;
 
-	public RemoteObjectModel(TypeModel type,
-			List<? extends PropertyModel> properties) {
+	public RemoteObjectModel(TypeModel type, List<? extends PropertyModel> properties) {
 		this.type = type;
 		this.properties = Collections.unmodifiableList(properties);
 	}
@@ -24,8 +23,7 @@ public class RemoteObjectModel {
 	public Set<TypeModel> getImports() {
 		Set<TypeModel> imports = new HashSet<TypeModel>();
 		for (TypeModel type : getRelatedClasses()) {
-			if (type.getPackage() != null
-					&& !type.getPackage().equals("java.lang")
+			if (type.getPackage() != null && !type.getPackage().equals("java.lang")
 					&& !type.getPackage().equals(getPackage())) {
 				imports.add(type);
 			}

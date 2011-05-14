@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.adaptiveplatform.flex2java</groupId>
 		<artifactId>flex2java</artifactId>
-		<version>0.9.1</version>
+		<version>1.0.RC1</version>
 	</parent>
 	<build>
 		<plugins>
@@ -68,6 +68,22 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>r08</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.8.3</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
 		</dependency>
 
 		<!-- test -->

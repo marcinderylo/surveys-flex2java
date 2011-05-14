@@ -1,11 +1,11 @@
-package org.adaptiveplatform.codegenerator.sampleclasses;
+package org.adaptiveplatform.codegenerator.acceptance;
 
 import java.util.List;
 
 import org.adaptiveplatform.codegenerator.api.RemoteService;
 
 @RemoteService
-public interface SampleDao {
+interface SampleDao {
 	SampleDto getUser(Long id);
 
 	List<SampleDto> query(String text);
