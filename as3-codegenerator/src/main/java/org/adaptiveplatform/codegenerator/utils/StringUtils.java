@@ -2,17 +2,10 @@ package org.adaptiveplatform.codegenerator.utils;
 
 public final class StringUtils {
 
-	private StringUtils() {
-	}
+    private StringUtils() {
+    }
 
-	public static String decapitalize(String str) {
-		if (str == null || str.isEmpty()) {
-			return str;
-		}
-		return str.substring(0, 1).toLowerCase() + str.substring(1);
-	}
-
-	public static String packageToPath(String pckage) {
-		return ArrayUtils.join(pckage.split("\\."), "/");
-	}
+    public static String packageToPath(String pckage) {
+        return org.apache.commons.lang.StringUtils.replaceChars(pckage, '.', '/');
+    }
 }

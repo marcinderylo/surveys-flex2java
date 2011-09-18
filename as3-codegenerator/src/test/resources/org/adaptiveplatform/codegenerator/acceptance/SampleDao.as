@@ -10,14 +10,14 @@ package org.adaptiveplatform.codegenerator.acceptance {
 	public interface SampleDao {
 	
 		/**
-		 * @returns SampleDto 
-		 */
-		function getUser(number:Number):ResultHandler;
-		
-		/**
 		 * @returns int 
 		 */
 		function count(arrayCollection:ArrayCollection):ResultHandler;
+		
+		/**
+		 * @returns SampleDto 
+		 */
+		function getUser(number:Number):ResultHandler;
 		
 		/**
 		 * @returns ArrayCollection of SampleDto

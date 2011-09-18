@@ -5,6 +5,8 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.adaptiveplatform.codegenerator.As3VariableNamesProvider;
@@ -46,6 +48,14 @@ public class RemoteServiceController implements CodeGenerationController {
 				methods.add(createMethod(method));
 			}
 		}
+        Collections.sort(methods, new Comparator<MethodModel>(){
+
+            @Override
+            public int compare(MethodModel o1, MethodModel o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+            
+        });
 		return new RemoteServiceModel(typeModel, methods);
 	}
 

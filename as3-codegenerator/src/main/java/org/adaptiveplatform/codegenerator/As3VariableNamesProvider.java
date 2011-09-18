@@ -3,8 +3,7 @@ package org.adaptiveplatform.codegenerator;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
-
-import org.adaptiveplatform.codegenerator.utils.StringUtils;
+import org.apache.commons.lang.StringUtils;
 
 public class As3VariableNamesProvider {
 
@@ -12,7 +11,7 @@ public class As3VariableNamesProvider {
 	private Set<String> usedNames = new HashSet<String>();
 
 	public String nameForParameter(String keyword) {
-		String candidate = StringUtils.decapitalize(keyword);
+		String candidate = StringUtils.uncapitalize(keyword);
 		while (restricted.contains(candidate) || usedNames.contains(candidate)) {
 			candidate = increaseTrailingNumber(candidate);
 		}

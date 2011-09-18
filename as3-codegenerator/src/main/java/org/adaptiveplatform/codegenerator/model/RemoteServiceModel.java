@@ -4,8 +4,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import org.adaptiveplatform.codegenerator.utils.StringUtils;
+import org.apache.commons.lang.StringUtils;
 
 /**
  * Model representing AS3 remote interface class.
@@ -56,7 +55,7 @@ public class RemoteServiceModel {
 	}
 
 	public String getBeanName() {
-		return StringUtils.decapitalize(getName());
+		return StringUtils.uncapitalize(getName());
 	}
 
 	public List<MethodModel> getMethods() {

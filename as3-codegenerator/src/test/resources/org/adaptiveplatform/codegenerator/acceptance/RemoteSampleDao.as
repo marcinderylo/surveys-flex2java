@@ -19,12 +19,12 @@ package org.adaptiveplatform.codegenerator.acceptance {
 		public function RemoteSampleDao() {
 		}
 		
-		public function getUser(number:Number):ResultHandler{
-			return remoteService.call("sampleDao", "getUser", number);
-		}
-		
 		public function count(arrayCollection:ArrayCollection):ResultHandler{
 			return remoteService.call("sampleDao", "count", arrayCollection);
+		}
+		
+		public function getUser(number:Number):ResultHandler{
+			return remoteService.call("sampleDao", "getUser", number);
 		}
 		
 		public function query(string:String):ResultHandler{
