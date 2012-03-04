@@ -11,11 +11,11 @@ import java.util.Set;
 import org.codehaus.plexus.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.sonatype.flexmojos.generator.api.GenerationException;
-import org.sonatype.flexmojos.generator.api.GenerationRequest;
-import org.sonatype.flexmojos.generator.api.Generator;
+import org.sonatype.flexmojos.generator.GenerationException;
+import org.sonatype.flexmojos.generator.GenerationRequest;
+import org.sonatype.flexmojos.generator.Generator;
 
-@Component(role = org.sonatype.flexmojos.generator.api.Generator.class, hint = "adaptiveCodeGenerator")
+@Component(role = org.sonatype.flexmojos.generator.Generator.class, hint = "adaptiveCodeGenerator")
 public class Java2FlexGeneratorFlexMojoRunner implements Generator {
 	private final Logger logger = LoggerFactory.getLogger(Java2FlexGeneratorFlexMojoRunner.class);
 
