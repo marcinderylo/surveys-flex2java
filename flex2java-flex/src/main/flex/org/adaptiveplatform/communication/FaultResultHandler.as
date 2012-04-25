@@ -26,9 +26,8 @@ package org.adaptiveplatform.communication {
 			return this;
 		}
 
-		public function onSuccessGoto(view:String):ResultHandler {
-			// do nothing
-			return this;
+		public function addListener(onSuccess:Function, onFailure:Function):ResultHandler{
+            throw new Error("not yet implemented");
 		}
 	}
 }

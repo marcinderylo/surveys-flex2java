@@ -15,7 +15,7 @@
 
 	<properties>
 		<flexsdk.version>3.5.0.12683</flexsdk.version>
-		<flexmojos.version>3.9</flexmojos.version>
+        <flexmojos.version>4.2-beta</flexmojos.version>
 	</properties>
 
 	<build>
@@ -127,7 +127,7 @@
 			<url>http://repository.sonatype.org/content/groups/flexgroup/</url>
 		</repository>
 		<repository>
-			<id>sonatype-flexmojos</id>
+			<id>sonatype-flexmojos2</id>
 			<url>https://repository.sonatype.org/service/local/repositories/flexmojos-releases/content</url>
 		</repository>
 		<repository>

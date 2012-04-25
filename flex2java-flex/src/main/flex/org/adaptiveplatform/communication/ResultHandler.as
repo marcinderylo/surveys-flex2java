@@ -5,5 +5,6 @@ package org.adaptiveplatform.communication {
 		function onSuccess(success:Function):ResultHandler;
 		function onFault(fault:Function):ResultHandler;
 		function onError(error:String, fault:Function):ResultHandler;
+		function addListener(onSuccess:Function, onFailure:Function):ResultHandler;
 	}
 }

@@ -43,5 +43,10 @@ package org.adaptiveplatform.communication {
 				}));
 			return this;
 		}
+		
+		public function addListener(onSuccess:Function, onFailure:Function):ResultHandler {
+            token.addResponder(new AsyncResponder(onSuccess, onFailure));
+			return this;		
+		}
 	}
 }

@@ -39,5 +39,11 @@ package org.adaptiveplatform.communication {
 				});
 			return this;
 		}
+		
+		public function addListener(onSuccess:Function, onFailure:Function):ResultHandler {
+		    remoteMethod.addEventListener(ResultEvent.RESULT, onSuccess);
+            remoteMethod.addEventListener(FaultEvent.FAULT, onFailure);
+			return this;
+		}
 	}
 }
