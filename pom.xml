@@ -112,33 +112,52 @@
 		</repository>
 		<repository>
 			<id>org.springframework.maven.milestone</id>
-			<url>http://maven.springframework.org/milestone </url>
+			<url>http://maven.springframework.org/milestone</url>
 		</repository>
-		<repository>
-			<id>JBoss</id>
-			<url>http://repository.jboss.com/maven2</url>
-		</repository>
-		<repository>
-			<id>adapt</id>
-			<url>http://svn2.xp-dev.com/svn/adapt-m2repo</url>
-		</repository>
-    	<repository>
-			<id>sonatype-flexmojos</id>
-			<url>http://repository.sonatype.org/content/groups/flexgroup/</url>
-		</repository>
-		<repository>
-			<id>sonatype-flexmojos2</id>
-			<url>https://repository.sonatype.org/service/local/repositories/flexmojos-releases/content</url>
-		</repository>
-		<repository>
-			<id>sonatype-flex</id>
-			<url>https://repository.sonatype.org/service/local/repositories/flex/content</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>sonatype-flexmojos</id>
-			<url>https://repository.sonatype.org/service/local/repositories/flexmojos-releases/content</url>
-		</pluginRepository>
-	</pluginRepositories>
+        <repository>
+            <id>org.springsource.maven.snapshot</id>
+            <url>http://maven.springframework.org/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>JBoss2</id>
+            <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+        </repository>
+        <repository>
+            <id>sonatype-flexmojos</id>
+            <url>https://repository.sonatype.org/service/local/repositories/flexmojos-releases/content</url>
+            <releases />
+            <snapshots />
+        </repository>
+        <repository>
+            <id>sonatype-flex</id>
+            <url>https://repository.sonatype.org/service/local/repositories/flex/content</url>
+            <releases />
+            <snapshots />
+        </repository>
+        <repository>
+            <id>codehaus</id>
+            <url>http://repository.codehaus.org</url>
+        </repository>
+        <repository>
+            <id>adapt</id>
+            <url>http://svn2.xp-dev.com/svn/adapt-m2repo</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>sonatype-flexmojos</id>
+            <url>https://repository.sonatype.org/service/local/repositories/flexmojos-releases/content</url>
+            <releases />
+            <snapshots />
+        </pluginRepository>
+        <pluginRepository>
+            <id>sonatype-flex</id>
+            <url>https://repository.sonatype.org/service/local/repositories/flex/content</url>
+            <releases />
+            <snapshots />
+        </pluginRepository>
+    </pluginRepositories>
 </project>
